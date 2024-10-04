@@ -24,8 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
   ```
 
 - **MainActivity.java**
@@ -59,17 +58,21 @@ public class MainActivity extends AppCompatActivity {
 
 **OUTPUT**
 
-# Develop a program to implement linear layout. Vertical and hrizontal
+# Develop a program to implement linear layout. 
 
-**CODE:**
+**CODE: For Vertical Layout**
 
 - **activity_main.xml**
 
   ```xml
   ```
 
-- **MainActivity.java**
-  
+**OUTPUT**
+
+**CODE: For Horizontal Layout**
+
+- **activity_main.xml**
+
   ```xml
   ```
 
@@ -80,11 +83,6 @@ public class MainActivity extends AppCompatActivity {
 **CODE:**
 
 - **activity_main.xml**
-
-  ```xml
-  ```
-   
-- **MainActivity.java**
 
   ```xml
   ```
@@ -100,7 +98,46 @@ public class MainActivity extends AppCompatActivity {
   ```xml
   ```
 
-- **MainActivity.java**
+**OUTPUT**
+
+# Develop a program to implement UI from Buttons Palette use Constraint Layout i.e Button, ImageButton, TogggleButton, Checkbox, Chip, ChipGroup, Radio Button and Radio Group and FloatingActionButton.
+
+**CODE:**
+
+- **activity_main.xml**
+
+  ```xml
+  ```
+
+**OUTPUT**
+
+# Develop a program to implement UI from Text Palette use Linear Layout two Login windows. First is to Login with a Key use [Password(numeric)] and in second UI implement frame Layout to display Phone, Postal address, Time, Date, Number, Number(signed) , Number (decimal), AutoCompleteTextView, MultiAutoCompleteTextView, CheckedTextView, TextInputLayout.
+
+**CODE:**
+
+- **activity_main.xml**
+
+  ```xml
+  ```
+
+**OUTPUT**
+
+# Develop a program to implement UI from Widgets Palette use Relative Layout i.e Progress Bar, SeekBar , RatingBar and Switch.
+
+**CODE:**
+
+- **activity_main.xml**
+
+  ```xml
+  ```
+  
+**OUTPUT**
+
+# Develop a program to implement UI from Containers Palette use Grid Layout i.e List View, Grid View, Image View, Scroll View, Recycler View, Navigation View, ButtomNavigationView.
+
+**CODE:**
+
+- **activity_main.xml**
 
   ```xml
   ```
