@@ -15,7 +15,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,35 +25,6 @@
         app:layout_constraintTop_toTopOf="parent" />
   </androidx.constraintlayout.widget.ConstraintLayout>
   ```
-
-- **MainActivity.java**
-
-```xml
-package com.example.prac4jasmeen;
-
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-    }
-}
-```
 
 **OUTPUT**
 
@@ -76,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     android:layout_centerVertical="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
     <EditText
         android:id="@+id/editTextText2"
         android:layout_width="match_parent"
@@ -84,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         android:ems="10"
         android:hint="to"
         android:inputType="text" />
-
     <EditText
         android:id="@+id/editTextText3"
         android:layout_width="match_parent"
@@ -92,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         android:ems="10"
         android:hint="Subject"
         android:inputType="text" />
-
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="match_parent"
@@ -102,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         android:lines="4"
         android:hint="Message"
         android:inputType="textMultiLine" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -460,6 +426,218 @@ public class MainActivity extends AppCompatActivity {
 - **activity_main.xml**
 
   ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- Display Screen -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="#FFFFFF"
+        android:text=""
+        android:textSize="32sp"
+        android:gravity="end|center_vertical"
+        android:padding="16dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- First Row Buttons: AC, (, ), % -->
+    <GridLayout
+        android:id="@+id/row1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+        <Button
+            android:text="AC"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <Button
+            android:text="("
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <Button
+            android:text=")"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <Button
+            android:text="%"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </GridLayout>
+    <!-- Numeric Buttons and Operators -->
+    <GridLayout
+        android:id="@+id/numericGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintTop_toBottomOf="@+id/row1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+        <!-- Row 1: 7, 8, 9, / -->
+        <Button
+            android:text="7"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="/"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <!-- Row 2: 4, 5, 6, * -->
+        <Button
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="*"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <!-- Row 3: 1, 2, 3, - -->
+        <Button
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="-"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <!-- Row 4: ., 0, =, + -->
+        <Button
+            android:text="."
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#E3F2FD"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+        <Button
+            android:text="="
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#F66335"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+        <Button
+            android:text="+"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:background="#6E7581"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </GridLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
   ```
 
 **OUTPUT**
