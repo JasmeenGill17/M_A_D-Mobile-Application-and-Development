@@ -268,11 +268,187 @@ public class MainActivity extends AppCompatActivity {
 
 # Develop a program to implement relative layout to display sign up form.
 
-**CODE:**
+**CODE: SignUp**
 
 - **activity_main.xml**
 
   ```xml
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/signup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:id="@+id/signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_title"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_email"
+        android:layout_marginTop="16dp"
+        android:hint="Create password"
+        android:inputType="textPassword" />
+    <EditText
+        android:id="@+id/signup_confirm_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_password"
+        android:layout_marginTop="16dp"
+        android:hint="Confirm password"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_confirm_password"
+        android:layout_marginTop="16dp"
+        android:text="Signup"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/login_redirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_button"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Already have an account? Login"
+        android:textColor="@android:color/holo_blue_dark" />
+    <TextView
+        android:id="@+id/signup_or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_redirect"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Or" />
+    <Button
+        android:id="@+id/signup_with_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_or_text"
+        android:layout_marginTop="8dp"
+        android:text="Login with Facebook"
+        android:backgroundTint="#3b5998"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/signup_with_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_with_facebook"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="#db4437"
+        android:text="Login with Google"
+        android:textColor="@android:color/white" />
+  </RelativeLayout>
+  ```
+
+  **CODE: Login**
+
+- **activity_main.xml**
+
+  ```xml
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_title"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_email"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_password"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Forgot password?"
+        android:textColor="@android:color/holo_blue_dark" />
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_password"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:id="@+id/signup_redirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_button"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Don't have an account? Signup"
+        android:textColor="@android:color/holo_blue_dark" />
+    <TextView
+        android:id="@+id/or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup_redirect"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="Or" />
+    <Button
+        android:id="@+id/login_with_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/or_text"
+        android:layout_marginTop="8dp"
+        android:text="Login with Facebook"
+        android:backgroundTint="#3b5998"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/login_with_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_with_facebook"
+        android:layout_marginTop="8dp"
+        android:text="Login with Google"
+        android:backgroundTint="#db4437"
+        android:textColor="@android:color/white" />
+  </RelativeLayout>
   ```
   
 **OUTPUT**
