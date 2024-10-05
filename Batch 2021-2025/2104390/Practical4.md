@@ -65,6 +65,53 @@ public class MainActivity extends AppCompatActivity {
 - **activity_main.xml**
 
   ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="to"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Subject"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:lines="4"
+        android:hint="Message"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="449dp"
+        android:layout_marginRight="10dp"
+        android:text="Send" />
+  </LinearLayout>
   ```
 
 **OUTPUT**
