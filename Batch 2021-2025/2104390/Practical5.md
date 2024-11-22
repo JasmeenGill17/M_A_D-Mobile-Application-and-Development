@@ -1,6 +1,7 @@
 PRACTICAL 5: Apps Interactivity in Android: To incorporate element of interactivity using Android Fragment and Intent Class.
 
 activity main.xml
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -46,7 +47,6 @@ android:layout_width="match_parent"
 android:layout_height="match_parent" />
 </LinearLayout>
 </LinearLayout>
-
 ```
 fragment first.xml
 
@@ -94,7 +94,6 @@ android:textSize="30sp"
 android:textStyle="bold"
 android:id="@+id/t2"/>
 </FrameLayout>
-
 ```
 
 fragment third.xml
@@ -188,7 +187,6 @@ TextView t1= view.findViewById(R.id.t1);
 return view;
 }
 }
-
 ```
 
 Output
