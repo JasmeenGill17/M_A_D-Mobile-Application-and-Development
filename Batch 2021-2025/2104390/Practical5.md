@@ -1,7 +1,6 @@
 PRACTICAL 5: Apps Interactivity in Android: To incorporate element of interactivity using Android Fragment and Intent Class.
 
 activity main.xml
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
