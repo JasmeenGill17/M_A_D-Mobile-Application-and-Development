@@ -1,6 +1,6 @@
-**PRACTICAL 5: Apps Interactivity in Android: To incorporate element of interactivity using Android Fragment and Intent Class.**
+PRACTICAL 5: Apps Interactivity in Android: To incorporate element of interactivity using Android Fragment and Intent Class.
 
-**activity main.xml**
+activity main.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,7 +49,7 @@ android:layout_height="match_parent" />
 </LinearLayout>
 
 ```
-**fragment first.xml**
+fragment first.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -75,7 +75,7 @@ android:textStyle="bold" />
 
 ```
 
-**fragment second.xml**
+fragment second.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -99,7 +99,7 @@ android:id="@+id/t2"/>
 
 ```
 
-**fragment third.xml**
+fragment third.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -122,7 +122,7 @@ android:id="@+id/t3"/>
 </FrameLayout>
 ```
 
-**MainActivity.java**
+MainActivity.java
 
 ```xml
 package com.example.fragments;
@@ -166,7 +166,7 @@ ft.commit();
 } }); } }
 ```
 
-**FirstFragment.java**
+FirstFragment.java
 
 ```xml
 package com.example.fragments;
@@ -193,9 +193,7 @@ return view;
 
 ```
 
-**Output**
-
-<figure>
+Output
   
 <img src="https://github.com/user-attachments/assets/a563493c-d979-4177-9b61-352f1adc4ba1" alt="Screenshot 2024-11-22 084850" width="150" height="350"/>
 
@@ -203,4 +201,4 @@ return view;
 
 <img src="https://github.com/user-attachments/assets/81bd05eb-04b2-41c1-922f-643d5b164432" alt="Screenshot 2024-11-22 084925" width="150" height="350"/>
 
-</figure>
+
