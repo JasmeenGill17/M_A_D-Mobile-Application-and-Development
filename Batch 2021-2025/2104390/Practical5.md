@@ -194,10 +194,10 @@ return view;
 
 Output
   
-<img src="https://github.com/user-attachments/assets/a563493c-d979-4177-9b61-352f1adc4ba1" alt="Screenshot 2024-11-22 084850" width="150" height="350"/>
+<img src="https://github.com/user-attachments/assets/a563493c-d979-4177-9b61-352f1adc4ba1" alt="Screenshot 2024-11-22 084850" width="150" height="350" style="border-radius: 0;"/>
 
-<img src="https://github.com/user-attachments/assets/38625566-2741-41fa-8f2b-2288464a3d7a" alt="Screenshot 2024-11-22 084910" width="150" height="350"/>
+<img src="https://github.com/user-attachments/assets/38625566-2741-41fa-8f2b-2288464a3d7a" alt="Screenshot 2024-11-22 084910" width="150" height="350" style="border-radius: 0;"/>
 
-<img src="https://github.com/user-attachments/assets/81bd05eb-04b2-41c1-922f-643d5b164432" alt="Screenshot 2024-11-22 084925" width="150" height="350"/>
+<img src="https://github.com/user-attachments/assets/81bd05eb-04b2-41c1-922f-643d5b164432" alt="Screenshot 2024-11-22 084925" width="150" height="350" style="border-radius: 0;"/>
 
 
