@@ -71,7 +71,6 @@ android:textColor="#ffffff"
 android:textSize="30sp"
 android:textStyle="bold" />
 </FrameLayout>
-
 ```
 
 fragment second.xml
